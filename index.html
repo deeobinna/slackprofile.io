@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My slack Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <header>
+            <p data-testid="slackUserName">Desmond Obinna</p>
+            <img data-testid="slackDisplayImage" src="images/my-pics.jpg" alt="osuagwuobinna00">
+        </header>
+        <p data-testid="currentDayOfTheWeek" id="weekDay">
+        </p>
+
+        <hr>
+        <p data-testid="currentUTCTime" id="timeOfDay"></p>
+
+        <hr>
+        <p data-testid ="myTrack">Track: Frontend</p>
+        <a href="https://www.github.com/deeobinna/slackprofile.io" data-testid="githubURL">Github</a>
+
+        <script>
+            const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const date = new Date();
+            const today = `current day of the week is:  ` + day[date.getDay()];
+            document.getElementById("weekDay").innerHTML = today;
+
+
+            const time = new Date();
+            document.getElementById("timeOfDay").innerHTML = time;
+        </script>
+    </body>
+</html>
